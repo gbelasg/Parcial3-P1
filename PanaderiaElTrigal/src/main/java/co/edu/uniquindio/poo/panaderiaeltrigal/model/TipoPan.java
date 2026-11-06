@@ -1,4 +1,6 @@
 package co.edu.uniquindio.poo.panaderiaeltrigal.model;
 
-public class Panadería {
+public enum TipoPan {
+    TRADICIONAL,
+    INTEGRAL
 }
