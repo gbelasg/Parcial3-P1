@@ -1,23 +1,36 @@
 package co.edu.uniquindio.poo.panaderiaeltrigal.controller;
 
 import co.edu.uniquindio.poo.panaderiaeltrigal.model.Empleado;
+import co.edu.uniquindio.poo.panaderiaeltrigal.model.IProductor;
+import co.edu.uniquindio.poo.panaderiaeltrigal.model.TipoPan;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Optional;
 
 public class EmpleadoController {
 
     private ArrayList<Empleado> listaEmpleados;
 
+
     public EmpleadoController() {
         this.listaEmpleados = new ArrayList<>();
+
     }
 
     public ArrayList<Empleado> getListaEmpleados() {
         return listaEmpleados;
     }
 
+
+
+
+
     public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
+    }
+    public void registrarEmpleado(Empleado empleado) {
+        agregarEmpleado(empleado);
     }
 
     public String agregarEmpleado(Empleado empleado){
@@ -39,4 +52,8 @@ public class EmpleadoController {
         return listaEmpleados.removeIf(empleado -> empleado.getCodigo().equalsIgnoreCase(codigo));
     }
 
+
+
 }
+
+

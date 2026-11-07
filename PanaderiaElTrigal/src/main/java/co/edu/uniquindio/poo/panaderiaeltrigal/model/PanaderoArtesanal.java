@@ -28,4 +28,5 @@ public class PanaderoArtesanal extends Empleado implements IProductor {
     public String getTipo() {
         return "Panadero Artesanal";
     }
+
 }

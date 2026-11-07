@@ -20,4 +20,5 @@ public class Cajero extends Empleado {
     public String getTipo() {
         return "Cajero";
     }
+
 }
