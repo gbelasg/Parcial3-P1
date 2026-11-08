@@ -13,8 +13,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 
-import java.awt.*;
 
 public class PanaderiaViewController {
     @FXML

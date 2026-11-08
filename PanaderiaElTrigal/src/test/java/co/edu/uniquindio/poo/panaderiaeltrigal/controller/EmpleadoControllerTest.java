@@ -12,30 +12,36 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EmpleadoControllerTest {
 
-    private EmpleadoController controller;
+    private EmpleadoController empleadoController;
+    private PedidoController pedidoController;
+    private Panaderia panaderia;
 
     @BeforeEach
     public void setUp() {
-        controller = new EmpleadoController();
+        panaderia = new Panaderia("El Trigal");
+        empleadoController = new EmpleadoController();
+        pedidoController = new PedidoController(panaderia);
     }
 
     @Test
-    //Cancelación de pedido pendiente
     public void testCancelarPedidoPendiente() {
-        // Entrada de datos: Juan (Artesanal 100m), Pedido P01 de 10 TRADICIONAL
+
         PanaderoArtesanal juan = new PanaderoArtesanal("Juan", "105", "E05", 100);
-        controller.registrarEmpleado(juan);
+        empleadoController.registrarEmpleado(juan);
 
-        Pedido p = controller.registrarPedido("P01", "Cafetería Central", TipoPan.TRADICIONAL, 10);
-        controller.cancelarPedido("P01");
+        pedidoController.registrarPedido("P01", "Cafetería Central", TipoPan.TRADICIONAL, 10);
 
-        // Salida: Historial no vacío, p queda CANCELADO y Juan conserva sus 100 minutos
-        List<Pedido> historial = controller.obtenerHistorialPedidos();
+        pedidoController.cancelarPedido("P01");
+        List<Pedido> historial = pedidoController.getHistorialPedidos();
         assertNotNull(historial);
         assertFalse(historial.isEmpty());
-        assertEquals(EstadoPedido.CANCELADO, p.getEstado());
+
+        Pedido pedidoCancelado = pedidoController.buscarPedido("P01"); // o desde el historial
+        assertNotNull(pedidoCancelado);
+        assertEquals(EstadoPedido.CANCELADO, pedidoCancelado.getEstado());
+
+
         assertEquals(100, juan.getMinutosDisponibles());
     }
 }
 
-}

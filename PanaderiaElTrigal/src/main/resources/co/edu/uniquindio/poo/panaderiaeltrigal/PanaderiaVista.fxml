@@ -168,11 +168,12 @@
 
                             <TableView fx:id="tblEmpleados" style="-fx-background-radius: 10px; -fx-border-color: #E6D2C1; -fx-border-radius: 10px;" VBox.vgrow="ALWAYS">
                                 <columns>
-                                    <TableColumn fx:id="colCodigo" prefWidth="100.0" text="Código" />
-                                    <TableColumn fx:id="colNombre" prefWidth="170.0" text="Nombre" />
-                                    <TableColumn fx:id="colDocumento" prefWidth="120.0" text="Documento" />
-                                    <TableColumn fx:id="colTipo" prefWidth="140.0" text="Tipo" />
-                                    <TableColumn fx:id="colMinutos" prefWidth="120.0" text="Min. Disponibles" />
+                                    <TableColumn fx:id="colCodigo" prefWidth="90.0" text="Código" />
+                                    <TableColumn fx:id="colNombre" prefWidth="150.0" text="Nombre" />
+                                    <TableColumn fx:id="colDocumento" prefWidth="110.0" text="Documento" />
+                                    <TableColumn fx:id="colTipo" prefWidth="120.0" text="Tipo" />
+                                    <TableColumn fx:id="colMinutos" prefWidth="110.0" text="Min. Disponibles" />
+                                    <TableColumn fx:id="colCaja" prefWidth="100.0" text="Caja / Detalle" />
                                 </columns>
                             </TableView>
 
