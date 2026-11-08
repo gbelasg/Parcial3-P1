@@ -15,7 +15,7 @@ class CajeroTest {
     @BeforeEach
     public void setUp() {
         panaderia = new Panaderia("El Trigal");
-        empleadoController = new EmpleadoController();
+        empleadoController = new EmpleadoController(panaderia);
         pedidoController = new PedidoController(panaderia);
     }
 

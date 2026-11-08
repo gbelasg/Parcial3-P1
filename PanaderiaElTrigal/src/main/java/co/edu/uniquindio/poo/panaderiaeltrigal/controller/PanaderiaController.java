@@ -1,7 +1,5 @@
 package co.edu.uniquindio.poo.panaderiaeltrigal.controller;
 
-import co.edu.uniquindio.poo.panaderiaeltrigal.controller.EmpleadoController;
-import co.edu.uniquindio.poo.panaderiaeltrigal.controller.PedidoController;
 import co.edu.uniquindio.poo.panaderiaeltrigal.model.Cajero;
 import co.edu.uniquindio.poo.panaderiaeltrigal.model.PanaderoArtesanal;
 import co.edu.uniquindio.poo.panaderiaeltrigal.model.PanaderoIndustrial;
@@ -16,7 +14,7 @@ public class PanaderiaController {
 
     public PanaderiaController(String nombre) {
         panaderia = new Panaderia(nombre);
-        empleadoController = new EmpleadoController();
+        empleadoController = new EmpleadoController(panaderia);
         //Empleados y pedidos trabajan sobre la lista de la panaderia
         empleadoController.setListaEmpleados(panaderia.getListaEmpleados());
         pedidoController = new PedidoController(panaderia);

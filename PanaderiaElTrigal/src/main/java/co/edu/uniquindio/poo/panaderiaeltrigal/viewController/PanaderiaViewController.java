@@ -80,7 +80,7 @@ public class PanaderiaViewController {
     @FXML
     public void initialize(){
         controlador = new PanaderiaController("Panadería El Trigal");
-        empleadoController= new EmpleadoController();
+        empleadoController= controlador.getEmpleadoController();
         pedidoController = controlador.getPedidoController();
         listaObservableEmpleados= FXCollections.observableArrayList();
         listaObservablePedidos = FXCollections.observableArrayList();

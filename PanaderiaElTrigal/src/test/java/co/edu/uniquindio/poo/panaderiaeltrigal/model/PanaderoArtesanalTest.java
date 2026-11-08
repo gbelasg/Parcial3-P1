@@ -1,9 +1,7 @@
 package co.edu.uniquindio.poo.panaderiaeltrigal.model;
 import co.edu.uniquindio.poo.panaderiaeltrigal.controller.EmpleadoController;
 import co.edu.uniquindio.poo.panaderiaeltrigal.controller.PedidoController;
-import co.edu.uniquindio.poo.panaderiaeltrigal.model.*;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,7 +15,7 @@ class PanaderoArtesanalTest {
     @BeforeEach
     public void setUp() {
         panaderia = new Panaderia("El Trigal");
-        empleadoController = new EmpleadoController();
+        empleadoController = new EmpleadoController(panaderia);
         pedidoController = new PedidoController(panaderia);
     }
 

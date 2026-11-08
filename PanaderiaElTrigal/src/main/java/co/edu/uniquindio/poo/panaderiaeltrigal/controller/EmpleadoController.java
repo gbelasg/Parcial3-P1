@@ -1,20 +1,15 @@
 package co.edu.uniquindio.poo.panaderiaeltrigal.controller;
 
-import co.edu.uniquindio.poo.panaderiaeltrigal.model.Cajero;
-import co.edu.uniquindio.poo.panaderiaeltrigal.model.Empleado;
-import co.edu.uniquindio.poo.panaderiaeltrigal.model.IProductor;
-import co.edu.uniquindio.poo.panaderiaeltrigal.model.TipoPan;
+import co.edu.uniquindio.poo.panaderiaeltrigal.model.*;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Optional;
 
 public class EmpleadoController {
 
     private ArrayList<Empleado> listaEmpleados;
 
 
-    public EmpleadoController() {
+    public EmpleadoController(Panaderia panaderia) {
         this.listaEmpleados = new ArrayList<>();
 
     }
