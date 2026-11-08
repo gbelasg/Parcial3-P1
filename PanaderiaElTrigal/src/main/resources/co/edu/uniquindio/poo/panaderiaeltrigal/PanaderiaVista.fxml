@@ -164,14 +164,14 @@
                                 </font>
                             </Label>
 
-                            <TableView fx:id="tblEmpleados" style="-fx-background-radius: 10px; -fx-border-color: #E6D2C1; -fx-border-radius: 10px;" VBox.vgrow="ALWAYS">
+                            <TableView fx:id="tblPedidos" style="-fx-background-radius: 10px; -fx-border-color: #E6D2C1; -fx-border-radius: 10px;" VBox.vgrow="ALWAYS">
                                 <columns>
-                                    <TableColumn fx:id="colCodigo" prefWidth="90.0" text="Código" />
-                                    <TableColumn fx:id="colNombre" prefWidth="150.0" text="Nombre" />
-                                    <TableColumn fx:id="colDocumento" prefWidth="110.0" text="Documento" />
-                                    <TableColumn fx:id="colTipo" prefWidth="120.0" text="Tipo" />
-                                    <TableColumn fx:id="colMinutos" prefWidth="110.0" text="Min. Disponibles" />
-                                    <TableColumn fx:id="colCaja" prefWidth="100.0" text="Caja / Detalle" />
+                                    <TableColumn fx:id="colCodigoPedido" prefWidth="100.0" text="Código Pedido" />
+                                    <TableColumn fx:id="colCliente" prefWidth="150.0" text="Cliente" />
+                                    <TableColumn fx:id="colTipoPan" prefWidth="120.0" text="Tipo de Pan" />
+                                    <TableColumn fx:id="colCantidad" prefWidth="90.0" text="Cantidad" />
+                                    <TableColumn fx:id="colEstado" prefWidth="110.0" text="Estado" />
+                                    <TableColumn fx:id="colEmpleadoAsignado" prefWidth="140.0" text="Empleado Asignado" />
                                 </columns>
                             </TableView>
 
