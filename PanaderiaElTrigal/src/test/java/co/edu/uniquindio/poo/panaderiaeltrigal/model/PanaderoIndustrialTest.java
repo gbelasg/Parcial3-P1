@@ -21,6 +21,8 @@ class PanaderoIndustrialTest {
         pedidoController = new PedidoController(panaderia);
     }
 
+    //cancelar un pedido con devolucion de dinero
+
     @Test
     public void testCancelarPedidoDevolucionParcial() {
         PanaderoIndustrial carlos = new PanaderoIndustrial("Carlos", "102", "E02", 120);

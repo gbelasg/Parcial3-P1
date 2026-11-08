@@ -3,7 +3,6 @@ package co.edu.uniquindio.poo.panaderiaeltrigal.model;
 import co.edu.uniquindio.poo.panaderiaeltrigal.controller.EmpleadoController;
 import co.edu.uniquindio.poo.panaderiaeltrigal.controller.PedidoController;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,8 +20,9 @@ class PanaderoArtesanalTest {
         pedidoController = new PedidoController(panaderia);
     }
 
+    //Asignar el pedido al panadero con menor tiempo
+
     @Test
-    @DisplayName("Asignar - Prueba de asignación por menor tiempo")
     public void testAsignarPedidoMenorTiempo() {
         PanaderoArtesanal ana = new PanaderoArtesanal("Ana", "101", "E01", 100);
         PanaderoIndustrial carlos = new PanaderoIndustrial("Carlos", "102", "E02", 45);
@@ -41,8 +41,9 @@ class PanaderoArtesanalTest {
         assertEquals(100, ana.getMinutosDisponibles());
     }
 
+    //Asignar panaderos con un orden especifico
+
     @Test
-    @DisplayName("Asignar - Prueba de descarte y desempate por registro")
     public void testAsignarPedidoDescarteYDesempate() {
         PanaderoArtesanal ana = new PanaderoArtesanal("Ana", "101", "E01", 80);
         PanaderoArtesanal diana = new PanaderoArtesanal("Diana", "104", "E04", 80);
