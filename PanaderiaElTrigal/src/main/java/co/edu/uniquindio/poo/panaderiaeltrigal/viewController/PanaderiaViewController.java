@@ -357,7 +357,9 @@ public class PanaderiaViewController {
     // Métodos de apoyo
     public void refrescarTablas() {
         listaObservableEmpleados.setAll(empleadoController.getListaEmpleados());
+        listaObservablePedidos.setAll(pedidoController.getHistorialPedidos());
         tblEmpleados.refresh();
+        tblPedidos.refresh();
     }
 
     public void alertas(String titulo, String contenido, Alert.AlertType tipoAlert) {
