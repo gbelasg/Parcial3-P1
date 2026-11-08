@@ -15,7 +15,7 @@
 
 <BorderPane prefHeight="800.0" prefWidth="1080.0" style="-fx-background-color: #FAF6F0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.panaderiaeltrigal.viewController.PanaderiaViewController">
 
-    <!-- 1. BARRA SUPERIOR -->
+
     <top>
         <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #4A2E17; -fx-padding: 15px 30px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 3);">
             <children>
@@ -53,12 +53,12 @@
         </HBox>
     </top>
 
-    <!-- 2. CUERPO PRINCIPAL DEL DASHBOARD -->
+
     <center>
         <VBox spacing="20.0" style="-fx-padding: 25px;">
             <children>
 
-                <!-- BANNER DE BIENVENIDA -->
+
                 <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #F3E5D8; -fx-padding: 16px 25px; -fx-background-radius: 15px; -fx-border-color: #E6D2C1; -fx-border-radius: 15px;">
                     <children>
                         <Label text="&#x1F468;&#x200D;&#x1F373;" textFill="#4A2E17">
@@ -85,7 +85,6 @@
 
                 <HBox spacing="22.0" VBox.vgrow="ALWAYS">
 
-                    <!-- FORMULARIO DE REGISTRO (CARD IZQUIERDA) -->
                     <VBox prefWidth="360.0" spacing="12.0" style="-fx-background-color: #FFFFFF; -fx-padding: 22px; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 10, 0, 0, 2); -fx-border-color: #EFE6DC; -fx-border-radius: 15px;">
                         <children>
                             <Label text="Registro de Empleado" textFill="#4A2E17">
@@ -157,7 +156,6 @@
                         </children>
                     </VBox>
 
-                    <!-- TABLA GENERAL (CARD DERECHA) -->
                     <VBox spacing="12.0" style="-fx-background-color: #FFFFFF; -fx-padding: 22px; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 10, 0, 0, 2); -fx-border-color: #EFE6DC; -fx-border-radius: 15px;" HBox.hgrow="ALWAYS">
                         <children>
                             <Label text="Listado General de Empleados" textFill="#4A2E17">
