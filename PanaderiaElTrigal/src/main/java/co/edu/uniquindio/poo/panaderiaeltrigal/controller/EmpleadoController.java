@@ -7,10 +7,12 @@ import java.util.ArrayList;
 public class EmpleadoController {
 
     private ArrayList<Empleado> listaEmpleados;
+    private Panaderia panaderia;
 
 
     public EmpleadoController(Panaderia panaderia) {
         this.listaEmpleados = new ArrayList<>();
+        this.panaderia = panaderia;
 
     }
 
@@ -22,7 +24,9 @@ public class EmpleadoController {
         this.listaEmpleados = listaEmpleados;
     }
     public void registrarEmpleado(Empleado empleado) {
-        agregarEmpleado(empleado);
+        if (panaderia != null && panaderia.getListaEmpleados() != null) {
+            panaderia.getListaEmpleados().add(empleado);
+        }
     }
 
     public String agregarEmpleado(Empleado empleado){

@@ -69,8 +69,10 @@ public class PedidoController {
         if (!pedido.estaPendiente()) {
             throw new IllegalStateException("El pedido " + codigo + " esta " + pedido.getEstado() + " y no se puede asignar");
         }
-        Empleado elegido= null;
+
+        Empleado elegido = null;
         int menorTiempo = 0;
+
         for (Empleado empleado : panaderia.getListaEmpleados()) {
             if (empleado instanceof IProductor) {
                 int minutos = calcularMinutos(empleado, pedido);
@@ -80,9 +82,11 @@ public class PedidoController {
                 }
             }
         }
+
         if (elegido == null) {
             throw new IllegalStateException("Ningun panadero tiene tiempo para el pedido " + codigo);
         }
+
         elegido.descontarMinutos(menorTiempo);
         pedido.asignar(elegido.getCodigo(), menorTiempo);
         return elegido;
